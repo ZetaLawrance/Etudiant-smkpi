@@ -1,0 +1,49 @@
+<?php
+include 'koneksi.php';
+
+function registrasi($data)
+{
+    $username = strtolower(stripslashes($_POST['username']));
+    $password = $_POST['password'];
+    $no_telepon = $_POST['no_telepon'];
+
+    // cek username sudah ada atau belum
+    include 'koneksi.php';
+    $hasil = mysqli_query($koneksi, "select * from data_user where username='$username'");
+
+    if (mysqli_fetch_assoc($hasil)) {
+        echo "<script>
+                    alert('Username ini sudah di pakai');
+                </script>";
+        return false;
+    }
+
+
+    include 'koneksi.php';
+    // enkripsi password
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
+    // insert ke database
+    $rand = rand();
+    $filename = $_FILES['gambar']['name'];
+    $ukuran = $_FILES['gambar']['size'];
+    $ekstensi =  array('png', 'jpg', 'jpeg', 'gif');
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+
+    if (!in_array($ext, $ekstensi)) {
+        header("location:index.php?alert=gagal_ekstensi");
+    } else {
+        if ($ukuran < 1044070) {
+            $gambar = $rand . '_' . $filename;
+            move_uploaded_file($_FILES['gambar']['tmp_name'], 'user/gambar/' . $rand . '_' . $filename);
+            mysqli_query($koneksi, "insert into data_user values('', '$nama', '$jenis_kelamin', '$gambar', '$username', '$password')");
+            header("location:sukses.php");
+            return mysqli_affected_rows($koneksi);
+        } else {
+            header("location:index.php?alert=salah ukuran");
+        }
+    }
+}
+
+
+?>
