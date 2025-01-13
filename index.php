@@ -44,7 +44,7 @@ if (isset($_POST['add_to_cart'])) {
     <!-- header -->
     <header>
         <a href="#" class="logo">
-            <img src="./assets_login/photo/Logo.ico" alt="Etudiant" style="height: 50px; width: 6po0px;">Étudiant
+            <img src="./assets_login/photo/Logo.ico" alt="Etudiant" style="height: 50px; width: 6po0px;">52 Group
         </a>
         <ul class="navlist">
             <li><a href="#home">Home</a></li>
@@ -127,7 +127,7 @@ if (isset($_POST['add_to_cart'])) {
     <section class="shop" id="shop">
         <div class="middle-text">
             <h4>Menu</h4>
-            <h2>Lets Check Popular Menu In Étudiant</h2>
+            <h2>Lets Check Popular Menu In 52 Group</h2>
         </div>
 
         <div class="shop-content">
@@ -267,7 +267,7 @@ if (isset($_POST['add_to_cart'])) {
         </div>
 
         <div class="row-btn">
-            <a href="#shop" class="btn">Etudiant Menu<i class='bx bxs-right-arrow'></i></a>
+            <a href="#shop" class="btn">52 Group Menu<i class='bx bxs-right-arrow'></i></a>
 
         </div>
     </section>
@@ -345,7 +345,7 @@ if (isset($_POST['add_to_cart'])) {
     <!--about us -->
     <section id="about">
         <div class="middle-text">
-            <h4>About Étudiant</h4>
+            <h4>About 52 Group</h4>
         </div>
     </section>
     <section class="about">
@@ -354,8 +354,7 @@ if (isset($_POST['add_to_cart'])) {
         </div>
 
         <div class="about-text">
-            <h2>Living well begins <br> with eating in Etudiant</h2>
-            <p>Etudiant merupakan sebuah web aplikasi yang dibuat oleh sekelompok siswa SMK kelas XI-PPLG dari SMK PRAKARYA INTERNASIONAL, yang bertujuan untuk mengembangkan bisnis kecil yang akan berkembang di bidang kuliner dan melayani costumer secara online melalui website. Etudiant juga berasal dari kata pelajar yang di ambil dari bahasa prancis.</p>
+            <h2>Living well begins <br> with eating in 52 Group</h2>
             <a href="#shop" class="btn">Explore Menu<i class='bx bxs-right-arrow'></i></a>
         </div>
     </section>
@@ -463,7 +462,7 @@ if (isset($_POST['add_to_cart'])) {
     </section>
 
     <div class="end-text">
-        <p>© Late 2024 Etudiant. All Rights Reserved.</p>
+        <p>© Late 2024 52 Group. All Rights Reserved.</p>
     </div>
 
     <!-- scroll top -->
